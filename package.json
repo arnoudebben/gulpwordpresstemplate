@@ -2,7 +2,7 @@
   "name": "aliens-template",
   "version": "1.0.0",
   "description": "aliens reclamebureau standaard template",
-  "main": "index.js",
+  "main": "Gulpfile.js",
   "scripts": {
     "test": "test"
   },
