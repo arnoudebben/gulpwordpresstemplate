@@ -1,3 +1,8 @@
+/*********************
+**** In te vullen ****
+*********************/
+var projectName = 'installatiemetgulptemplate';
+
 var gulp         = require('gulp');
 var browserSync  = require('browser-sync').create();
 var sass         = require('gulp-sass');
@@ -12,7 +17,7 @@ var uglify       = require('gulp-uglify');
 gulp.task('server', ['styles'], function() {
 
 	browserSync.init({
-		proxy: 'localhost/testwebsite'
+		proxy: 'localhost/' + projectName
 	});
 
 	gulp.watch('src/sass/**/*.scss', ['styles']).on('change', browserSync.reload);
