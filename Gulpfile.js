@@ -27,8 +27,20 @@ gulp.task('server', ['styles'], function() {
 
 // Styles
 gulp.task('styles', function() {
+
+	var onError = function(err) {
+		notify.onError({
+					title:    "Gulp",
+					subtitle: "Failure!",
+					message:  "Error: <%= error.message %>",
+					sound:    "Beep"
+				})(err);
+
+		this.emit('end');
+	};
+
 	return gulp.src('src/sass/**/*.scss')
-		.pipe(plumber())
+		.pipe(plumber({errorHandler: onError}))
 		.pipe(sourcemaps.init())
 
 		.pipe(sass())
