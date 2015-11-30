@@ -12,6 +12,7 @@ var sourcemaps   = require('gulp-sourcemaps');
 var plumber      = require('gulp-plumber');
 var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
+var notify       = require('gulp-notify');
 
 // Static Server
 gulp.task('server', ['styles'], function() {
